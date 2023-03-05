@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackHound</title>
+ 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+</head>
+<body> 
+  <nav>
+    <div class="logo">
+      <a><img src="static/img/solana.svg" style="position: relative; left: 11rem;" width="200" height="20" alt=""></a>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="{{url_for('order')}}">Order Now!</a></li>
+      <li><a href="{{url_for('form')}}">Form</a></li>
+      <li><a href="#">Connect to Wallet</a></li>
+    </ul>
+    
+    
+    <button class="login-button signup">Login with Google</button>
+    <button class="login-button">Sign Up</button>
+  </nav>
+  
+</body>
+<body>
+    <div class="typing-effect">
+        <h1>Welcome to my Restaurant!</h1>
+        <div id="auto-type" class="typing-text"></div>
+      </div>    
+      
+    <video autoplay loop muted poster="Pexels Videos 3933.mp4" id="video-background">
+      <source src="static/img/bgvideo.mp4" type="video/mp4">
+      <source src="background-video.webm" type="video/webm">
+    </video>
+    <div class="content">
+      <!-- Your website content here -->
+    </div>
+    <script type="text/javascript" src="static/js/script.js"></script>
+  </body>
+</html>
