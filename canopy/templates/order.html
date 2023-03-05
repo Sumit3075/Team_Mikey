@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+
+
+<script type="text/javascript">
+		
+    
+
+    
+  var total = 0;
+  var price_1 = {pp1};
+  function increment(elementId) 
+  {
+      let elemId = `val${elementId}`;
+      console.log(elemId);
+      let element = document.getElementById(elemId);
+      element.value++;
+      let rateid = `rate${elementId}`;
+      console.log(rateid);
+      document.getElementById(rateid).innerHTML = `₹${element.value * price_1}` ;
+      update_total();
+     //  let total = document.getElementById('Total');
+     //  total.value += 349;
+     //  document.getElementById('Total').innerHTML = `₹${total.value}`;
+     
+  
+   }
+   function decrement(elementId)
+   {
+      let elemId = `val${elementId}`;
+      console.log(elemId);
+      let element = document.getElementById(elemId);
+      element.value--;
+      total -= 349;
+      let rateid = `rate${elementId}`;
+      console.log(rateid);
+      document.getElementById(rateid).innerHTML = `₹${element.value * price_1}` ;
+      update_total();
+     //  let total = document.getElementById('Total');
+     //  total.value -= 349;
+     //  document.getElementById('Total').innerHTML = `₹${total.value}`;
+   }
+   function update_total()
+   {
+     document.getElementById('Total').innerHTML = `₹${total}`;
+   }
+  
+  
+    </script>
+
+<body>
+    
+
+        <nav>
+          <div class="color logo">
+            <a><img src="static/img/solana.svg" style="position: relative; left: 11rem;" width="200" height="20" alt=""></a>
+          </div>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="order.html">Order Now!</a></li>
+            <li><a href="form.html">Form</a></li>
+            <li><a href="#">Connect to Wallet</a></li>
+          </ul>
+          
+          
+         
+        </nav>
+        
+      </body>
+      <body>
+    <center><div class="color shopping-cart">
+            <!-- Title -->
+            <div class="color title">
+              Cart
+            </div>
+           
+            <!-- Product #1 -->
+            <div class="color item">
+              <div class="color buttons">
+                <span class="color delete-btn"></span>
+                <span class="color like-btn"></span>
+              </div>
+           
+              <div class="color image">
+                <img src="item-1.png" alt="" />
+              </div>
+           
+              <div class="color description">
+                <span>{{a}}</span>
+              </div>
+           
+              <div class="color quantity">
+                <button class="color minus-btn" type="button" name="button" onclick="decrement(1)">
+                    <img src="static/img/minus.svg" alt="">
+                  </button>
+                <input type="number" id="val1" min="0">
+                <button class="color plus-btn" type="button" name="button" onclick="increment(1)">
+                    <img src="static/img/plus.svg" alt="">
+                </button>
+              </div>
+           
+              <div class="color total-price" id="rate1"></div>
+              <div class="total-price color">₹{{pp1}}</div>
+            </div>
+           
+            <!-- Product #2 -->
+            <div class="color item">
+              <div class="color buttons">
+                <span class="color delete-btn"></span>
+                <span class="color like-btn"></span>
+              </div>
+           
+              <div class="color image">
+                <img src="img" alt=""/>
+              </div>
+           
+              <div class="color description">
+                <span>{{b}}</span>
+               
+              </div>
+           
+              <div class="color quantity">
+                  <button class="color minus-btn" type="button" name="button" onclick = "decrement(2)">
+                    <img src="static/img/minus.svg" alt="" />
+                  </button>
+                  <input type="number" name="name" id="val2" min="0">
+                  <button class="color plus-btn" type="button" name="button" onclick = "increment(2)">
+                    <img src="static/img/plus.svg" alt="" />
+                  </button>
+              </div>
+           
+              <div class="color total-price" id="rate2"></div>
+              <div class="total-price color">₹{{pp2}}</div>
+            </div>
+           
+            <!-- Product #3 -->
+            <div class="color item">
+              <div class="color buttons">
+                <span class="color delete-btn"></span>
+                <span class="color like-btn"></span>
+              </div>
+           
+              <div class="color image">
+                <img src="item-3.png" alt="" />
+              </div>
+           
+              <div class="color description">
+                <span>{{c}}</span>
+                
+              </div>
+           
+              <div class="color quantity">
+                  <button class="color minus-btn" type="button" name="button" onclick = "decrement(3)">
+                    <img src="static/img/minus.svg" alt="">
+                  </button>
+                  <input type="number" name="name"  id="val3" min="0">
+                  <button class="color plus-btn" type="button" name="button" onclick = "increment(3)">
+                    <img src="static/img/plus.svg" alt="">
+                  </button>
+                  </div>
+                  <div class="color total-price" id="rate3"></div>
+                  <div class="total-price color">₹{{pp3}}</div>
+
+
+              </div>
+              <!-- button4 -->
+              <div class="color item">
+                <div class="color buttons">
+                  <span class="color delete-btn"></span>
+                  <span class="color like-btn"></span>
+                </div>
+             
+                <div class="color image">
+                  <img src="item-3.png" alt="" />
+                </div>
+             
+                <div class="color description">
+                  <span>{{d}}</span>
+                  
+                </div>
+             
+                <div class="color quantity">
+                    <button class="color minus-btn" type="button" name="button" onclick = "decrement(4)">
+                      <img src="static/img/minus.svg" alt="">
+                    </button>
+                    <input type="number" name="name"  id="val4" min="0">
+                    <button class="color plus-btn" type="button" name="button" onclick = "increment(4)">
+                      <img src="static/img/plus.svg" alt="">
+                    </button>
+                    </div>
+                    <div class="color total-price" id="rate4"></div>
+                    <div class="total-price color">₹{{pp4}}</div>
+  
+  
+                </div>
+
+                <!-- b5 -->
+                <div class="color item">
+                    <div class="color buttons">
+                      <span class="color delete-btn"></span>
+                      <span class="color like-btn"></span>
+                    </div>
+                 
+                    <div class="color image">
+                      <img src="item-3.png" alt="" />
+                    </div>
+                 
+                    <div class="color description">
+                      <span>{{e}}</span>
+                      
+                    </div>
+                 
+                    <div class="color quantity">
+                        <button class="color minus-btn" type="button" name="button" onclick = "decrement(5)">
+                          <img src="static/img/minus.svg" alt="">
+                        </button>
+                        <input type="number" name="name"  id="val5" min="0">
+                        <button class="color plus-btn" type="button" name="button" onclick = "increment(5)">
+                          <img src="static/img/plus.svg" alt="">
+                        </button>
+                        </div>
+                        <div class="color total-price" id="rate5"></div>
+                        <div class="total-price color">₹{{pp5}}</div>
+      
+      
+                    </div>
+                    <!-- b6 -->
+                <div class="color item">
+                    <div class="color buttons">
+                      <span class="color delete-btn"></span>
+                      <span class="color like-btn"></span>
+                    </div>
+                 
+                    <div class="color image">
+                      <img src="item-3.png" alt="" />
+                    </div>
+                 
+                    <div class="color description">
+                      <span>{{f}}</span>
+                      
+                    </div>
+                 
+                    <div class="color quantity">
+                        <button class="color minus-btn" type="button" name="button" onclick = "decrement(6)">
+                          <img src="static/img/minus.svg" alt="">
+                        </button>
+                        <input type="number" name="name"  id="val6" min="0">
+                        <button class="color plus-btn" type="button" name="button" onclick = "increment(6)">
+                          <img src="static/img/plus.svg" alt="">
+                        </button>
+                        </div>
+                        <div class="color total-price" id="rate6"></div>
+                        <div class="total-price color">₹{{pp6}}</div>
+      
+      
+                    </div>
+                    <!-- b7 -->
+                <div class="color item">
+                    <div class="color buttons">
+                      <span class="color delete-btn"></span>
+                      <span class="color like-btn"></span>
+                    </div>
+                 
+                    <div class="color image">
+                      <img src="item-3.png" alt="" />
+                    </div>
+                 
+                    <div class="color description">
+                      <span>{{g}}</span>
+                      
+                    </div>
+                 
+                    <div class="color quantity">
+                        <button class="color minus-btn" type="button" name="button" onclick = "decrement(7)">
+                          <img src="static/img/minus.svg" alt="">
+                        </button>
+                        <input type="number" name="name"  id="val7" min="0">
+                        <button class="color plus-btn" type="button" name="button" onclick = "increment(7)">
+                          <img src="static/img/plus.svg" alt="">
+                        </button>
+                        </div>
+                        <div class="color total-price" id="rate7"></div>
+                        <div class="total-price color">₹{{pp7}}</div>
+      
+      
+                    </div>
+                    <!-- b5 -->
+                <div class="color item">
+                    <div class="color buttons">
+                      <span class="color delete-btn"></span>
+                      <span class="color like-btn"></span>
+                    </div>
+                 
+                    <div class="color image">
+                      <img src="item-3.png" alt="" />
+                    </div>
+                 
+                    <div class="color description">
+                      <span>{{h}}</span>
+                      
+                    </div>
+                 
+                    <div class="color quantity">
+                        <button class="color minus-btn" type="button" name="button" onclick = "decrement(8)">
+                          <img src="static/img/minus.svg" alt="">
+                        </button>
+                        <input type="number" name="name"  id="val8" min="0">
+                        <button class="color plus-btn" type="button" name="button" onclick = "increment(8)">
+                          <img src="static/img/plus.svg" alt="">
+                        </button>
+                        </div>
+                        <div class="color total-price" id="rate8"></div>
+                        <div class="total-price color">₹{{pp8}}</div>
+      
+      
+                    </div>
+                    <!-- b5 -->
+                <div class="color item">
+                    <div class="color buttons">
+                      <span class="color delete-btn"></span>
+                      <span class="color like-btn"></span>
+                    </div>
+                 
+                    <div class="color image">
+                      <img src="item-3.png" alt="" />
+                    </div>
+                 
+                    <div class="color description">
+                      <span>{{i}}</span>
+                      
+                    </div>
+                 
+                    <div class="color quantity">
+                        <button class="color minus-btn" type="button" name="button" onclick = "decrement(9)">
+                          <img src="static/img/minus.svg" alt="">
+                        </button>
+                        <input type="number" name="name"  id="val9" min="0">
+                        <button class="color plus-btn" type="button" name="button" onclick = "increment(9)">
+                          <img src="static/img/plus.svg" alt="">
+                        </button>
+                        </div>
+                        <div class="color total-price" id="rate9"></div>
+                        <div class="total-price color">₹{{pp9}}</div>
+      
+      
+                    </div>
+                    <div class="color item">
+                      <div class="color buttons">
+                        <span class="color delete-btn"></span>
+                       
+                      </div>
+                   
+                      <div class="color image">
+                        <img src="item-3.png" alt="" />
+                      </div>
+                   
+                      <div class="color description">
+                        <span>Total Amount=</span>
+                        
+                      </div>
+                      <div class="total-price color" id ="Total"></div>
+                   
+                      <div class="color total-price" id="rate9"></div>
+                      <a class="color login-button" src="solana-tutorials-t03-react-wallet/react-wallet/src/index.tsx">Pay Now</a>
+        
+        
+                      </div>
+
+                    
+                    
+    </center></div>
+    <video autoplay loop muted poster="Pexels Videos 3933.mp4" id="video-background">
+      <source src="static/img/bgvideo.mp4" type="video/mp4">
+      <source src="background-video.webm" type="video/webm">
+    </video>
+          <div class="color content">
+            <!-- Your website content here -->
+          </div>
+          <script type="text/javascript" src="static/js/order.js"></script>
+        
+    
+</body>
+</html>

@@ -1,0 +1,390 @@
+/* Styles for the navigation bar */
+nav {
+  background-color: #000000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-top: 0rem;
+  margin-left: -11rem;
+  width: 85.35rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-right: 20px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Styles for responsive design */
+@media only screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  ul {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+  li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/* Styles for login button */
+.login-button {
+  background-color: #4285f4;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #357ae8;
+}
+/* Styles for the video background */
+#video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+/* Styles for the website content */
+.content {
+  position: relative;
+  z-index: 1;
+}
+.signup{
+  position: relative;
+  right: -12rem;
+}
+.about{
+  font-family: 'Times New Roman', Times, serif;
+  font-size:400%;
+  align-items: center;
+  font-weight: bolder;
+  color: #fff;
+}  
+.para{
+  font-family: 'Times New Roman', Times, serif;
+  font-size:larger;
+  align-items: center;
+  color: #fff;
+  margin-left: 10rem;
+  margin-right: 10rem;
+
+}
+/* .plus-btn{
+  color: #fff;
+}
+
+.minus-btn{
+  color: #fff;
+}
+.description{
+  color: #fff;
+}
+.title{
+  color: #fff;
+}
+.price{
+  color: #fff;
+} */
+
+.shopping-cart {
+  width: 750px;
+  height: 423px;
+  margin: 80px auto;
+  /* background: #FFFFFF; */
+  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+  border-radius: 6px;
+
+  display: flex;
+  flex-direction: column;
+}
+* {
+  box-sizing: border-box;
+  color: white;
+  font-size: large;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  /* background-color: #7EC855; */
+  font-family: 'Roboto', sans-serif;
+}
+.title {
+  height: 60px;
+  border-bottom: 1px solid #E1E8EE;
+  padding: 20px 30px;
+  color: #5E6977;
+  font-size: 18px;
+  font-weight: 400;
+}
+ 
+.item {
+  padding: 20px 30px;
+  height: 120px;
+  display: flex;
+}
+ 
+.item:nth-child(3) {
+  border-top:  1px solid #E1E8EE;
+  border-bottom:  1px solid #E1E8EE;
+}
+.item:nth-child(7) {
+  border-top:  1px solid #E1E8EE;
+  border-bottom:  1px solid #E1E8EE;
+}
+.item:nth-child(5) {
+  border-top:  1px solid #E1E8EE;
+  border-bottom:  1px solid #E1E8EE;
+}
+.item:nth-child(9) {
+  border-top:  1px solid #E1E8EE;
+  border-bottom:  1px solid #E1E8EE;
+}
+
+.buttons {
+  position: relative;
+  padding-top: 30px;
+  margin-right: 60px;
+}
+.delete-btn,
+.like-btn {
+  display: inline-block;
+  Cursor: pointer;
+}
+.delete-btn {
+  width: 18px;
+  height: 17px;
+  background: url(&amp;quot;delete-icn.svg&amp;quot;) no-repeat center;
+}
+ 
+.like-btn {
+  position: absolute;
+  top: 9px;
+  left: 15px;
+  background: url('twitter-heart.png');
+  width: 60px;
+  height: 60px;
+  background-size: 2900%;
+  background-repeat: no-repeat;
+}
+.image {
+  margin-right: 50px;
+}
+h1 {
+  background: linear-gradient(to left, #d4e2a0, #31ee0b);
+  -webkit-text-fill-color: transparent;   
+  font-weight: 900;
+  font-size: larger;
+}
+
+ 
+.description {
+  padding-top: 10px;
+  margin-right: 60px;
+  width: 115px;
+}
+ 
+.description span {
+  display: block;
+  font-size: 14px;
+  color: #fdfdfd;
+  font-weight: 400;
+}
+ 
+.description span:first-child {
+  margin-bottom: 5px;
+}
+.description span:last-child {
+  font-weight: 300;
+  margin-top: 8px;
+  color: #fcfeff;
+}
+.quantity {
+  padding-top: 20px;
+  margin-right: 60px;
+}
+
+  
+.quantity input {
+  background-image: linear-gradient(to right, #ffffff, #a3e4fd);
+  border: none;
+  text-align: center;
+  width: 5rem;
+  font-size: 22px;
+  color: #000000;
+  font-weight: 500;
+}
+
+ 
+button[class*=btn] {
+  width: -1rem;
+  height: 22px;
+  background-image: linear-gradient(to right, #2300e9, #29afe4);
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
+.minus-btn img {
+  margin-bottom: 3px;
+}
+.plus-btn img {
+  margin-top: 2px;
+}
+ 
+button:focus,
+input:focus {
+  outline:0;
+}  
+.total-price {
+  width: 83px;
+  padding-top: 27px;
+  text-align: center;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+}
+.color{
+  color: #ffffff;
+}
+
+#form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  text-align: center;
+}
+.height{
+  height: 3rem;
+}
+.question {
+  text-align: left;
+}
+
+.hidden {
+  display: none;
+}
+
+#buttons {
+  margin-top: 20px;
+}
+
+#prev-btn {
+  margin-right: 10px;
+}
+
+#submit-btn {
+  margin-top: 20px;
+}
+
+
+button#submit-btn {
+  background-image: linear-gradient(to right, #78afe0, #2f33f0);
+
+  font-size: 20px;
+  padding: 15px 30px;
+  /* border: 2px solid rgb(70, 223, 70); */
+  border-radius: 50px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+button#submit-btn:hover {
+  background-image: linear-gradient(to right, #f8acac, #ffffff);
+
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+button#prev-btn,
+button#next-btn {
+  background-image: linear-gradient(to right, #00f798, #fcfcfc);
+  font-size: 20px;
+  padding: 15px 30px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+button#prev-btn:hover,
+button#next-btn:hover {
+  cursor: pointer;
+  background-image: linear-gradient(to right, #e0eb7e, #fae635);
+  color: white;
+}
+.font{
+  font-size: 200%;
+}
+
+
+.typing-effect {
+  text-align: center;
+  padding: 50px 0;
+  color: #fdfdfd;
+}
+
+.typing-text {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #fffcfc;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  position: relative;
+
+  align-items: center;
+  height: 100vh;
+}
+
+.order-now-btn {
+background: linear-gradient(to right, #e9ae60, #ff8c00);
+color: #fff;
+font-size: 20px;
+padding: 15px 30px;
+cursor: pointer;
+animation: jump 1s ease-in-out infinite;
+}
+
+
+/* @keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px)
+  }
+  } */

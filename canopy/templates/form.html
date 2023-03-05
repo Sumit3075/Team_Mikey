@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+  <nav>
+    <div class="color logo">
+      <a><img src="static/img/solana.svg" style="position: relative; left: 11rem;" width="200" height="20" alt=""></a>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="order.html">Order Now!</a></li>
+      <li><a href="form.html">Form</a></li>
+      <li><a href="#">Connect to Wallet</a></li>
+    </ul>
+    
+    
+    <button class="color login-button signup">Login with Google</button>
+    <button class="color login-button">Sign Up</button>
+  </nav>
+</body>
+<body>
+  <div class="color color" id="form-container">
+    <form id="mcq-form" action="/predict" method="POST">
+  <div id="question1" class="question">
+    <h2>Question 1:</h2>
+    <p class="font">What is your favorite cuisine?</p>
+    <input type="radio"  name="cuisine" value="American">
+    <label for="American">American</label><br>
+    <input type="radio"  name="cuisine" value="Indian">
+    <label for="Indian">Indian</label><br>
+    <input type="radio"  name="cuisine" value="Italian">
+    <label for="Italian">Italian</label><br>
+
+  </div>
+  <div id="question2" class="question hidden">
+    <h2>Question 2:</h2>
+    <p class="font">How many Colories you want to have?</p>
+    <input type="radio"  name="calories"value="l200">
+    <label for="l200">less than 200</label><br>
+    <input type="radio"  name="calories"value="l500">
+    <label for="l500">Between 300 and 500</label><br>
+  </div>
+  <div id="question3" class="question hidden">
+    <h2>Question 3:</h2>
+    <p class="font">Are you allergic to anything?</p>
+    <input type="radio"  name="allergy" value="peanuts">
+    <label for="peanut">Peanuts</label><br>
+    <input type="radio"  name="allergy" value="lactose">
+    <label for="lactose">Lactose intolerance</label><br>
+    <input type="radio"  name="allergy" value="resin">
+    <label for="Resin">Ressin</label><br>
+
+  </div>
+  <div id="question4" class="question hidden">
+    <h2>Question 4:</h2>
+    <p class="font">What type of foodie are you?</p>
+    <input type="radio"  name="type" value="veg">
+    <label for="veg">Vegetarian</label><br>
+    <input type="radio"  name="type" value="nveg">
+    <label for="nveg">Non-Vegetarian</label><br>
+    <input type="radio"  name="type" value="vegan">
+    <label for="vegan">Vegan</label><br>
+
+
+
+
+  </div>
+  <div id="question5" class="question hidden">
+    <h2>Question 5:</h2>
+    <p class="font">How much spicy you like?</p>
+    <input type="radio"  name="spicy" value="l">
+    <label for="l">Low</label><br>
+    <input type="radio"  name="spicy" value="m">
+    <label for="m">Medium</label><br>
+    <input type="radio"  name="spicy" value="h">
+    <label for="h">High</label><br>
+
+
+
+
+  </div>
+      <div id="buttons">
+        <button type="button" id="prev-btn" disabled>Previous</button>
+        <button type="button" id="next-btn">Next</button>
+        <button type="submit" id="submit-btn" class="hidden">Submit</button>
+      </div>
+    </form>
+  </div>
+  <div>
+    <video autoplay loop muted poster="Pexels Videos 3933.mp4" id="video-background">
+      <source src="static/img/bgvideo.mp4" type="video/mp4">
+      <source src="background-video.webm" type="video/webm">
+    </video>
+  </div>
+  
+  <script type="text/javascript" src="static/js/form.js"></script>
+    
+</body>
+</html>
